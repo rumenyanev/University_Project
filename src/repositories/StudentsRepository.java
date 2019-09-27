@@ -12,17 +12,17 @@ import java.util.Map;
 
 public class StudentsRepository {
 
-    private static final String INPUT_PATH = "C:\\Users\\User\\Desktop\\OUTPUT\\result.txt";
+    private static final String INPUT_PATH = "C:\\Users\\smL\\Desktop\\JAVA Project in GitHub\\Universited_Project\\files\\result.txt";
 
     private Map<Integer, Student> students;
     //private BufferedReader readerFile;
-    //private BufferedWriter writeFile;
-    private PrintWriter printWriter;
+    private BufferedWriter writeFile;
+    //private PrintWriter printWriter;
 
     public StudentsRepository() throws IOException {
         this.students = new LinkedHashMap<>();
-        //this.writeFile = new BufferedWriter(new FileWriter(INPUT_PATH));
-        this.printWriter = new PrintWriter(INPUT_PATH);
+        this.writeFile = new BufferedWriter(new FileWriter(INPUT_PATH));
+        //this.printWriter = new PrintWriter(INPUT_PATH);
     }
 
     public void addStudent(Student student) {
@@ -37,7 +37,11 @@ public class StudentsRepository {
         return students;
     }
 
+    public BufferedWriter getWriteFile() {
+        return writeFile;
+    }
+
     public void writeInFile(String str) throws IOException {
-        this.printWriter.write(str);
+        this.writeFile.write(str);
     }
 }

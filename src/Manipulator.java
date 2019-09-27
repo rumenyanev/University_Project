@@ -59,6 +59,13 @@ public class Manipulator implements Runnable {
             }
         }
 
+        //Файлът трябва да се затвори, след края на писането в него.
+        try {
+            this.studentsRepository.getWriteFile().close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }
