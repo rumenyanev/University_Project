@@ -15,18 +15,13 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.BaseStageController">
    <top>
-      <VBox prefHeight="116.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="68.0" prefWidth="811.0" BorderPane.alignment="CENTER">
          <children>
             <MenuBar prefHeight="35.0" prefWidth="600.0">
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
@@ -40,7 +35,7 @@
       </VBox>
    </top>
    <bottom>
-      <HBox prefHeight="21.0" prefWidth="692.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="42.0" prefWidth="811.0" BorderPane.alignment="CENTER">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="University System 1.0">
                <HBox.margin>
@@ -62,13 +57,16 @@
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
             </Hyperlink>
          </children></HBox>
    </bottom>
    <center>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="325.0" prefWidth="811.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="369.0" prefWidth="235.0">
+            <VBox prefHeight="384.0" prefWidth="257.0">
                <children>
                   <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="176.0">
                      <children>
@@ -154,21 +152,27 @@
                   </HBox>
                   <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="201.0" prefHeight="38.0" prefWidth="176.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#testButtonClicked" text="Test" />
-                        <Button mnemonicParsing="false" onAction="#exitButtonClicked" text="Exit">
+                        <Button mnemonicParsing="false" onAction="#testButtonClicked" text="Test" textFill="#616ac9" />
+                        <Button mnemonicParsing="false" onAction="#exitButtonClicked" text="Exit" textFill="#b91010">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
                         </Button>
                         <Button mnemonicParsing="false" text="Reset">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Save">
+                        <Button mnemonicParsing="false" text="Save" textFill="#11a424">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
                         </Button>
                      </children>
                   </HBox>
