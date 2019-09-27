@@ -6,6 +6,7 @@ import models.Student;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -43,5 +44,14 @@ public class StudentsRepository {
 
     public void writeInFile(String str) throws IOException {
         this.writeFile.write(str);
+    }
+
+    //TEST
+    public void removeContentOfRepository() throws IOException {
+        FileWriter fw = new FileWriter(INPUT_PATH);
+        PrintWriter pw = new PrintWriter(fw);
+        pw.write("");
+        pw.flush();
+        pw.close();
     }
 }
