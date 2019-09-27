@@ -67,7 +67,9 @@ public class Manipulator implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
-
+    public void removeContentOfFile() throws IOException {
+        this.studentsRepository.removeContentOfRepository();
     }
 }

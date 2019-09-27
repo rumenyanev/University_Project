@@ -13,7 +13,7 @@ import java.util.Map;
 @SuppressWarnings("SpellCheckingInspection")
 public class StudentsRepository {
 
-    private static final String INPUT_PATH = "C:\\Users\\smL\\Desktop\\JAVA Project in GitHub\\Universited_Project\\files\\result.txt";
+    private static final String INPUT_PATH = "files\\result.txt";
 
     private Map<Integer, Student> students;
     //private BufferedReader readerFile;

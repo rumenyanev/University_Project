@@ -1,4 +1,4 @@
-package visualPartTest;
+package visualPartTest_R;
 
 import core.Manipulator;
 
@@ -20,9 +20,6 @@ public class MyFrame extends JFrame implements ActionListener {
     private JButton sendInformationButton; //Бутон за записване на студента
     private String sendInformationName = "Запиши студента";// Име на бутона:
 
-    private JButton deleteContentFile; //Бутон за записване на студента
-    private String deleteContentFileName = "Изтриване на файла";// Име на бутона:
-
     private JButton starButton; //Бутон за записване на студента
     private String startButtonName = "Старт (бутон само за тест)";// Име на бутона:
 
@@ -33,6 +30,7 @@ public class MyFrame extends JFrame implements ActionListener {
 
         super("Студентска система 1.0");
         setBounds(250, 250, 500, 500);
+        getContentPane().setBackground(Color.GREEN);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(true);
         setLayout(null);
@@ -47,12 +45,8 @@ public class MyFrame extends JFrame implements ActionListener {
         this.starButton = new JButton();
         this.starButton.setBounds(60, 120, 175, 30);
         this.starButton.setText(this.startButtonName);
+        this.starButton.setForeground(Color.RED);
         this.starButton.addActionListener(this);
-
-        this.deleteContentFile = new JButton();
-        this.deleteContentFile.setBounds(60, 210, 175, 30);
-        this.deleteContentFile.setText(this.deleteContentFileName);
-        this.deleteContentFile.addActionListener(this);
 
         this.exitButton = new JButton();
         this.exitButton.setBounds(60, 90, 175, 30);
@@ -62,11 +56,10 @@ public class MyFrame extends JFrame implements ActionListener {
         this.exitButton.setForeground(Color.BLUE);
         this.exitButton.addActionListener(this);
 
-        add(text1);
-        add(textField1);
+        //add(text1);
+        //add(textField1);
         add(starButton);
         add(exitButton);
-        add(deleteContentFile);
         setVisible(true);
 
     }
@@ -79,13 +72,6 @@ public class MyFrame extends JFrame implements ActionListener {
             try {
                 Manipulator m = new Manipulator();
                 m.run();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }else if (actionEvent.getSource().equals(deleteContentFile)){
-            try {
-                Manipulator m = new Manipulator();
-                m.removeContentOfFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
