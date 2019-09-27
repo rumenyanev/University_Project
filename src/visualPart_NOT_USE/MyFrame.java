@@ -1,4 +1,4 @@
-package visualPartTest;
+package visualPart_NOT_USE;
 
 import core.Manipulator;
 
