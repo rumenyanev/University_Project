@@ -1,8 +1,6 @@
-import models.Student;
-
 import java.io.IOException;
 
-public class Main {
+class Main {
     public static void main(String[] args) throws IOException {
 
         Manipulator manipulator = new Manipulator();

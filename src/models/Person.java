@@ -5,6 +5,7 @@ import constants.CommonConstants;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@SuppressWarnings("CanBeFinal")
 public class Person {
 
     private String firstName;
@@ -18,7 +19,7 @@ public class Person {
     //private double avgGradeYear;
 
 
-    public Person(String firstName, String lastName, int age, String department) {
+    Person(String firstName, String lastName, int age, String department) {
         count++;
         this.firstName = firstName;
         this.lastName = lastName;

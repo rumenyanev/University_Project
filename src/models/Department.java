@@ -1,4 +1,4 @@
 package models;
 
-public class Department {
+class Department {
 }

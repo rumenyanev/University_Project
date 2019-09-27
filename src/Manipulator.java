@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Manipulator implements Runnable {
+class Manipulator implements Runnable {
 
     private StudentsRepository studentsRepository;
 
