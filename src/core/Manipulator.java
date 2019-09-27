@@ -1,3 +1,5 @@
+package core;
+
 import models.Student;
 import repositories.StudentsRepository;
 
@@ -5,7 +7,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
 
-class Manipulator implements Runnable {
+public class Manipulator implements Runnable {
 
     private StudentsRepository studentsRepository;
 
