@@ -21,7 +21,7 @@ public class StudentsRepository {
 
     public StudentsRepository() throws IOException {
         this.students = new LinkedHashMap<>();
-        this.writeFile = new BufferedWriter(new FileWriter(INPUT_PATH));
+        this.writeFile = new BufferedWriter(new FileWriter(INPUT_PATH, true)); //Ако имаме true означава, че файлът ще се дописва на всяко пускане на програмата.
         //this.printWriter = new PrintWriter(INPUT_PATH);
     }
 
