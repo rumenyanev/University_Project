@@ -1,30 +1,46 @@
 package visual;
 //Да не се стартира от Main на visual пакета!!! Има грешки за оправяне! :)
-import core.Manipulator;
+
+import core.Manipulator_visual;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 
 public class BaseStageController {
 
-    @FXML // fx:id="firstNameStudent"
-    private TextField firstNameStudent; // Value injected by FXMLLoader
+    private Manipulator_visual manipulator_test;
+    @FXML
+    private TextField firstNameStudent;
+    @FXML
+    private TextField lastNameStudent;
+    @FXML
+    private TextField emailStudent;
+    @FXML
+    private TextField ageStudent;
+    @FXML
+    private TextField departmentStudent;
 
-    public void sendInformationButtonClicked() {
-        TextField firstNameStudent = this.firstNameStudent;
-        //System.out.println(this.firstNameStudent.get);
+    public BaseStageController() throws IOException {
+        this.manipulator_test = new Manipulator_visual();
     }
 
-    public void testButtonClicked() throws IOException {
-        System.out.println("Test start of program...");
-        Manipulator m = new Manipulator();
-        m.run();
+    public void sendInformationButtonClicked() throws IOException {
+        System.out.println();
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.firstNameStudent.getText()).append(", ");
+        sb.append(this.lastNameStudent.getText()).append(", ");
+        //sb.append(this.emailStudent.getText()).append(", ");
+        sb.append(this.ageStudent.getText()).append(", ");
+        sb.append(this.departmentStudent.getText());
+        String result = sb.toString();
+        sb.delete(0,sb.length());
+        manipulator_test.setOneStudentData(result);
+        manipulator_test.run();
+
     }
 
     public void exitButtonClicked() {
@@ -34,6 +50,10 @@ public class BaseStageController {
     public void facebookLinkClicked() throws IOException, URISyntaxException {
         Desktop d = Desktop.getDesktop();
         d.browse(new URI("http://facebook.com"));
+    }
+
+    public void removeAllInformationForStudent() throws IOException {
+        this.manipulator_test.removeContentOfFile();
     }
 
 }

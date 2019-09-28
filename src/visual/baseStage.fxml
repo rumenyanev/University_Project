@@ -101,7 +101,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Text>
-                        <TextField prefHeight="25.0" prefWidth="150.0" promptText="last name">
+                        <TextField fx:id="lastNameStudent" prefHeight="25.0" prefWidth="150.0" promptText="last name">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
@@ -115,7 +115,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Text>
-                        <TextField prefHeight="25.0" prefWidth="150.0" promptText="email address">
+                        <TextField fx:id="emailStudent" prefHeight="25.0" prefWidth="150.0" promptText="email address">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
@@ -129,7 +129,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Text>
-                        <TextField prefHeight="25.0" prefWidth="150.0" promptText="Age">
+                        <TextField fx:id="ageStudent" prefHeight="25.0" prefWidth="150.0" promptText="Age">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
@@ -143,7 +143,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Text>
-                        <TextField prefHeight="25.0" prefWidth="150.0" promptText="department">
+                        <TextField fx:id="departmentStudent" prefHeight="25.0" prefWidth="150.0" promptText="department">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
@@ -214,6 +214,18 @@
                         </TextField>
                      </children>
                   </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="404.0" prefWidth="291.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#removeAllInformationForStudent" text="Remove all information for students" textFill="#ee4545">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
                </children>
             </VBox>
          </children>
