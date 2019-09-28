@@ -87,7 +87,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Text>
-                        <TextField prefHeight="25.0" prefWidth="150.0" promptText="first name">
+                        <TextField fx:id="firstNameStudent" prefHeight="25.0" prefWidth="150.0" promptText="first name">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
@@ -152,8 +152,7 @@
                   </HBox>
                   <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="201.0" prefHeight="38.0" prefWidth="176.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#testButtonClicked" text="Test" textFill="#616ac9" />
-                        <Button mnemonicParsing="false" onAction="#exitButtonClicked" text="Exit" textFill="#b91010">
+                        <Button mnemonicParsing="false" text="Exit" textFill="#b91010">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
@@ -161,12 +160,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" text="Reset">
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" text="Save" textFill="#11a424">
+                        <Button mnemonicParsing="false" onAction="#sendInformationButtonClicked" text="Save" textFill="#11a424">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
@@ -174,6 +168,50 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="404.0" prefWidth="239.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="176.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Specialty Information">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="176.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField prefHeight="25.0" prefWidth="150.0" promptText="first name">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="176.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Department">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField prefHeight="25.0" prefWidth="150.0" promptText="department">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
                      </children>
                   </HBox>
                </children>
