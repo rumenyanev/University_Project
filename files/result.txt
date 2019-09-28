@@ -5,3 +5,4 @@ Plamen Simeonov 22 1 biology plamenSim@abv.bg -1,00
 Evgeny Rusev 21 1 math GehchoRusev@yahoo.com -1,00
 Silvia Mihova 22 2 math silmih@gmail.com -1,00
 Ivelina Gesheva 23 3 philology Няма данни за електронна поща! -1,00
+Trifon Enev 23 1 history slonove@yahoo.com -1,00

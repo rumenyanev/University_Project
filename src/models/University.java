@@ -3,7 +3,7 @@ package models;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-class University {
+public class University {
     private String name;
     private Map<String, Department> departments;
 
