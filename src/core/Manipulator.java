@@ -2,6 +2,7 @@ package core;
 
 import models.Student;
 import repositories.StudentsRepository;
+import validators.Validator;
 
 import java.io.IOException;
 import java.util.Map;
@@ -18,6 +19,7 @@ public class Manipulator implements Runnable {
     @Override
     public void run() {
         Scanner scanner = new Scanner(System.in);
+
         //vyvejdame informacia za student i syzdavame edin student
         //vyvejdame informacia za prepodavatel i syzdavame takyv
         //vyvejdame informacia i syzdavame edna specialnost
@@ -28,6 +30,7 @@ public class Manipulator implements Runnable {
         while (true) {
             System.out.print("Въведете името на студента: ");
             String nameStudent = scanner.nextLine();
+            Validator.invalidName(nameStudent);
             System.out.print("Въведете фамилията на студента: ");
             String lastNameStudent = scanner.nextLine();
             System.out.print("Въведете години на студента: ");
