@@ -30,7 +30,7 @@ public class MyFrame extends JFrame implements ActionListener {
 
         super("Студентска система 1.0");
         setBounds(250, 250, 500, 500);
-        getContentPane().setBackground(Color.GREEN);
+        getContentPane().setBackground(Color.GRAY);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(true);
         setLayout(null);
@@ -56,8 +56,8 @@ public class MyFrame extends JFrame implements ActionListener {
         this.exitButton.setForeground(Color.BLUE);
         this.exitButton.addActionListener(this);
 
-        //add(text1);
-        //add(textField1);
+        add(text1);
+        add(textField1);
         add(starButton);
         add(exitButton);
         setVisible(true);
