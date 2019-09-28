@@ -18,6 +18,12 @@ public class Manipulator implements Runnable {
     @Override
     public void run() {
         Scanner scanner = new Scanner(System.in);
+        //vyvejdame informacia za student i syzdavame edin student
+        //vyvejdame informacia za prepodavatel i syzdavame takyv
+        //vyvejdame informacia i syzdavame edna specialnost
+        //vyvejdame informacia i syzdavame edin fakultet
+        //vyvejdame informacia i syzdavame edin universitet
+
 
         while (true) {
             System.out.print("Въведете името на студента: ");
