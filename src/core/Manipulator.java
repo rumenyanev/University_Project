@@ -3,6 +3,7 @@ package core;
 import models.Student;
 import repositories.StudentsRepository;
 import validators.Validator;
+import visual.BaseStageController;
 
 import java.io.IOException;
 import java.util.Map;
@@ -11,63 +12,38 @@ import java.util.Scanner;
 public class Manipulator implements Runnable {
 
     private StudentsRepository studentsRepository;
+    private String oneStudentData;
 
     public Manipulator() throws IOException {
         this.studentsRepository = new StudentsRepository();
+        this.oneStudentData = null;
+    }
+
+    public void setOneStudentData(String oneStudent) {
+        this.oneStudentData = oneStudent;
+    }
+
+    public void takeDateFromForm(String oneStudentData) {
+        this.oneStudentData = oneStudentData;
     }
 
     @Override
     public void run() {
-        Scanner scanner = new Scanner(System.in);
+        String data = this.oneStudentData;
+        String[] studentData = data.split(", ");
+        Student student = new Student(studentData[0], studentData[1],
+                Integer.parseInt(studentData[2]), studentData[3]);
+        this.studentsRepository.addStudent(student);
+        this.writeStudentInFile(student.toString());
 
-        //vyvejdame informacia za student i syzdavame edin student
-        //vyvejdame informacia za prepodavatel i syzdavame takyv
-        //vyvejdame informacia i syzdavame edna specialnost
-        //vyvejdame informacia i syzdavame edin fakultet
-        //vyvejdame informacia i syzdavame edin universitet
+    }
 
-
-        while (true) {
-            System.out.print("Въведете името на студента: ");
-            String nameStudent = scanner.nextLine();
-            Validator.invalidName(nameStudent);
-            System.out.print("Въведете фамилията на студента: ");
-            String lastNameStudent = scanner.nextLine();
-            System.out.print("Въведете години на студента: ");
-            int age = Integer.parseInt(scanner.nextLine());
-            System.out.print("Въведете факултета на студента: ");
-            String departmentStudent = scanner.nextLine();
-
-            Student student = new Student(nameStudent, lastNameStudent, age, departmentStudent);
-
-            System.out.print("Въведете електронната поща на студента: ");
-            String studentEmail = scanner.nextLine();
-
-            if (!(studentEmail == null || studentEmail.trim().isEmpty())) {
-                try {
-                    student.setEmail(studentEmail);
-                } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                }
-            }
-
-            this.studentsRepository.addStudent(student);
-
-            System.out.print("Искате ли да въведете нов студент? :");
-            String answer = scanner.nextLine();
-            if (!answer.equals("yes")) {
-                break;
-            }
-        }
-
-
-        for (Map.Entry<Integer, Student> oneStudent : this.studentsRepository.getStudents().entrySet()) {
-            String oneStudentAsString = oneStudent.getValue().toString();
-            try {
-                this.studentsRepository.writeInFile(oneStudentAsString);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+    private void writeStudentInFile(String oneStudentAsString) {
+        try {
+            this.studentsRepository.writeInFile(oneStudentAsString);
+            this.studentsRepository.getWriteFile().close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         //Файлът трябва да се затвори, след края на писането в него.

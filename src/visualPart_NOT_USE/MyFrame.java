@@ -1,6 +1,6 @@
 package visualPart_NOT_USE;
 
-import core.Manipulator;
+import core.Manipulator_old;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -77,14 +77,14 @@ public class MyFrame extends JFrame implements ActionListener {
             System.exit(0);
         }else if (actionEvent.getSource().equals(starButton)){
             try {
-                Manipulator m = new Manipulator();
+                Manipulator_old m = new Manipulator_old();
                 m.run();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }else if (actionEvent.getSource().equals(deleteContentFile)){
             try {
-                Manipulator m = new Manipulator();
+                Manipulator_old m = new Manipulator_old();
                 m.removeContentOfFile();
             } catch (IOException e) {
                 e.printStackTrace();

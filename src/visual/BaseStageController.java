@@ -1,7 +1,7 @@
 package visual;
 //Да не се стартира от Main на visual пакета!!! Има грешки за оправяне! :)
 
-import core.Manipulator_visual;
+import core.Manipulator;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
@@ -12,7 +12,7 @@ import java.net.URISyntaxException;
 
 public class BaseStageController {
 
-    private Manipulator_visual manipulator_test;
+    private Manipulator manipulator_test;
     @FXML
     private TextField firstNameStudent;
     @FXML
@@ -25,7 +25,7 @@ public class BaseStageController {
     private TextField departmentStudent;
 
     public BaseStageController() throws IOException {
-        this.manipulator_test = new Manipulator_visual();
+        this.manipulator_test = new Manipulator();
     }
 
     public void sendInformationButtonClicked() throws IOException {

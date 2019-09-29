@@ -8,34 +8,37 @@ import java.util.regex.Pattern;
 @SuppressWarnings("CanBeFinal")
 public class Person {
 
+    private static int count = 0;
+
+    private int id;
     private String firstName;
     private String lastName;
+    private String phone;
     private String email;
     private int age;
-    private int id;
     private String department;
 
-    private static int count = 0;
-    //private double avgGradeYear;
-
-
-    Person(String firstName, String lastName, int age, String department) {
-        count++;
+    public Person(int id, String firstName, String lastName, int age, String department) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.phone = "-";
+        this.email = "-";
         this.age = age;
-        this.id = count;
         this.department = department;
-        this.email = CommonConstants.NO_EMAIL;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public void setEmail(String email) {
         String regex = "^.+@.+\\.[a-z]{2,3}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
-        if (matcher.find()){
+        if (matcher.find()) {
             this.email = email;
-        }else{
+        } else {
             throw new IllegalArgumentException(CommonConstants.INVALID_EMAIL);
         }
     }
